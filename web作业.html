@@ -34,8 +34,8 @@
     margin-top : 30px; 
     }
     .欢迎text p {
-        font-size: 20px;
-        line-height: 2.0;
+        font-size: 25px;
+        line-height: 1.7;
         text-align: justify;
         padding: 0 50px;
     }
@@ -67,6 +67,88 @@
     .系列1 p,.系列2 p,.系列3 p{
         font-size: 20px;
         line-height: 2.0;
+    }
+    .详细{
+    display: block;
+    width: fit-content;
+    margin: 100px auto;
+    background-color: black;
+    color: white;
+    padding: 25px;
+    font-size: 25px;   
+    }
+    .用户{
+        display: flex;
+        flex-direction: column;
+    }
+    .用户 h3{
+        display: block;
+        margin: 30px auto;
+        font-size: 30px;
+    }
+    .用户 img{
+        display: block;
+        margin: 30px auto;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .用户 .评价{
+        margin: 0 25%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    .用户 p{
+        margin: 20px 150px;
+        line-height: 2.0;
+    }
+    .展示{
+        display: flex;
+        flex-direction: column;
+    }
+    .展示 h3{
+        text-align: center;
+        margin-top: 100px;
+        font-size: 30px;
+    }
+    .展示 img{
+        display: block;
+        margin: 30px auto;
+        height: 800px;
+    }
+    .购买{
+        display: block;
+        width: fit-content;
+        margin: 50px auto;
+        background-color: brown;
+        color: white;
+        padding: 25px;
+        font-size: 25px;   
+    }
+    .推荐{
+        display: block;
+        width: fit-content;
+        margin: 50px auto;
+        background-color: brown;
+        color: white;
+        padding: 25px;
+        font-size: 25px;   
+    }
+    .新品{
+        display: flex;
+        flex-direction: column;
+        margin: 0 25%;
+         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);  
+    }
+    .新品1,.新品2,.新品3{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .新品 p{
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
     }
     </style>
 </head>
@@ -105,35 +187,45 @@
                 <p>用以绘画、写艺术字、艺术签名。扁平状的笔尖设计，适合书写艺术字。立体感极佳，1.1、1.5、1.9 三种笔尖可供选择，可书写粗细不等的立体字，让您随时感受变化的乐趣。复古的笔杆设计，经典又与众不同，显示出独特的欣赏品味。</p>
             </div>
         </div>
-        <a href="#">了解详细</a>
+        <a href="#" class="详细">了解详细>></a>
     </section>
     <div class="redyellow">
     <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155550141.png" alt="红黄钢笔">
     </div> 
     <section>
+        <div class="用户">
         <h3>What people are saying</h3>
-        <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155532472.png" alt="用户头像">
-        <div class="comment">
+        <div class="评价">
+        <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155532472.png" alt="用户头像">       
         <p>使用令人难以置信的生产技术和坚持极高水平的精准要求，仅使用一种材质，也足以成就出这款永恒的设计。产品本身尽显极不相同加工程序和制造工艺，手工打磨的笔尖挫痕面充分体现了品牌对细节的注重。</p>
+        </div>
         </div>
     </section>
     <section>
+        <div class="展示">
         <h3>Choose Our products</h3>
         <div class="产品组">
         <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155645282.png" alt="产品组">
+        <a href="#" class="购买">戳我速购>></a>
         </div>
-        <a href="#">戳我速购>></a>
+        </div>
     </section>
     <section>
-    <div class="新品">
+        <div class="新品">
+            <div class="新品1">
         <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155536645.png">
         <p>You make millions of decisions that mean nothing, and then one day your order takes out life.</p>
+            </div>
+            <div class="新品2">
         <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155537818.png">
         <p>It's sad when you realize you aren't as important to someone as you thought you were</p>
+            </div>
+            <div class="新品3">
         <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155535659.png">
         <p>Love is unequal, so don't count how much one contributes, and which is more active.</p>
+            </div>        
         </div>
-        <h3>新品推荐</h3>
+        <a href="#" class="推荐">新品推荐>></a>
     </section>
     <section>
         <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260130155545872.png">
