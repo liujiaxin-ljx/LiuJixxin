@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .wugui {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin: 0;
+        overflow: hidden;
+    }
+    .wuguimg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .wuguitext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .wuguitext h1 {
+        color: white;
+        margin: 0 0 10px 0;
+        font-size: 60px;
+        font-weight: normal;
+    }
+    .wuguitext p {
+        font-size: 25px;
+        margin: 0 0 20px 0;
+        max-width: 1000px;
+        line-height: 1.5;
+    }
+    .wuguitext button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+    .huoliebird-box {
+        display: flex;
+        justify-content: center;
+    }
+    .huoliebird-card {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        padding: 0 50px;
+    }
+    .huoliebirdimg {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .huoliebirdtext {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        font-size: 25px;
+        margin: 0;
+    }
+    .signup-section {
+        width: 100%;
+        min-height: 700px;
+        background-image: url('https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154639620.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin-top: 20px;
+    }
+    .signup-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(240, 240, 240, 0.9);
+        padding: 2rem;
+        max-width: 500px;
+        text-align: center;
+    }
+    .signup-card p {
+        font-size: 15px;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 1.5rem;
+    }
+    .signup-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    .signup-btn:hover {
+        background-color: #45a049;
+    }
+    .difference-section {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    .section-title {
+        text-align: center;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 30px;
+    }
+    .animal-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    .animal-card {
+        width: 150px;
+        text-align: center;
+        border: 1px solid #eee;
+        padding: 10px;
+    }
+    .animal-card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .animal-name {
+        font-size: 15px;
+        color: #333;
+        margin: 5px 0;
+    }
+    .animal-desc {
+        font-size: 15px;
+        color: #666;
+    }
+    .know-more-btn {
+        display: block;
+        margin: 0 auto 40px;
+        padding: 5px 20px;
+        border: 1px solid #999;
+        background: white;
+        cursor: pointer;
+    }
+    .photo-section {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .photo-left {
+        flex: 0 0 400px;
+    }
+    .photo-left img {
+        width: 100%;
+        height: auto;
+    }
+    .photo-right {
+        flex: 1;
+        min-width: 300px;
+    }
+    .photo-right h3 {
+        font-size: 15px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .photo-right p {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    .photo-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #333;
+    }
+    .step-text {
+        line-height: 5.0;
+        font-size: 20px;
+        color: #333;
+    }
+    .bottom-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .bottom-left {
+        display: flex;
+        gap: 30px;
+    }
+    .bottom-item h3 {
+        font-size: 15px;
+        color: #333;
+        margin: 0 0 5px 0;
+    }
+    .bottom-item p {
+        font-size: 12px;
+        color: #666;
+        margin: 0;
+    }
+    .big-world-btn {
+        background-color: #a0b89a;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <div class="wugui">
+        <img class="wuguiimg" src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212155816781.png">
+        <div class="wuguitext">
+            <h1>Animal Photography</h1>
+            <p>A silhouette of them, a simple little action, here are the photographer eyes the best of them, their laughter, their love, their every vivid are left by us.</p>
+            <button>EXPLORE</button>
+        </div>
+    </div>
+    <div class="huoliebird-box">
+        <div class="huoliebird-card">
+            <img class="huoliebirdimg" src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154632722.png" alt="Fly">
+            <p class="huoliebirdtext">Fly</p>
+        </div>
+        <div class="huoliebird-card">
+            <img class="huoliebirdimg" src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154633819.png" alt="Love">
+            <p class="huoliebirdtext">Love</p>
+        </div>
+        <div class="huoliebird-card">
+            <img class="huoliebirdimg" src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154637668.png" alt="Stand">
+            <p class="huoliebirdtext">Stand</p>
+        </div>
+    </div>
+    <div class="signup-section">
+        <div class="signup-card">
+            <p>"Family Farms is the best place, where I can buy fruit vegetable meat honey milk eggs and so on for my restaurant directly from supplier. Super convenient. Thank you' xdcnfc chfesc chncjcdn dncfin dcdwvrwsig dgs dddc ddof infjy ejw fm jnzzesh cqldmcdsc ddnc, cddmdcds dncfin cdn wqeoess, dondassasas,cdqdnc cciqposkm cbdcpqslq nhfere nfhqcjlc dndcoww frhjfnc qpdjiew cmqcqe, cqjsdc cn djnddc. nct cdnqsl dcjnddcdy csjnqc dctdncl dqddnc cdjq, qkdxkdqe wqcnpsdc qcw. cqnonny dctond dcpjshvb wcmwq cowwnjsq wqq c wcl dwch, cnjcnc ece cdtcncdwmc newwc domc cjnc ,c cqmc weewvc."</p>
+            <button class="signup-btn">SIGN UP</button>
+        </div>
+    </div>
+    <div class="difference-section">
+        <h2 class="section-title">Difference</h2>
+        <div class="animal-cards">
+            <div class="animal-card">
+                <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154628194.png" alt="Horse">
+                <p class="animal-name">Horse</p>
+                <p class="animal-desc">A difference story</p>
+            </div>
+            <div class="animal-card">
+                <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154629548.png" alt="Kangaroo">
+                <p class="animal-name">Kangaroo</p>
+                <p class="animal-desc">A difference story</p>
+            </div>
+            <div class="animal-card">
+                <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154631723.png" alt="Lion">
+                <p class="animal-name">Lion</p>
+                <p class="animal-desc">A difference story</p>
+            </div>
+            <div class="animal-card">
+                <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154630794.png" alt="Hummingbird">
+                <p class="animal-name">Hummingbird</p>
+                <p class="animal-desc">A difference story</p>
+            </div>
+        </div>
+        <button class="know-more-btn">Know more</button>
+
+        <div class="photo-section">
+            <div class="photo-left">
+                <img src="https://00000000.oss-cn-beijing.aliyuncs.com/Data/I/%E5%B7%A5%E5%85%B7/PicGo/20260212154641117.png" alt="Squirrel">
+            </div>
+            <div class="photo-right">
+                <h3>The Photo</h3>
+                <p>"Family Farms is the best placewhere I can buy fruit,vegetable,meat,honey,milk, eggs and so on for my restaurant directly from supplier. Super convenient.Thank you"</p>
+                <div class="photo-steps">
+                    <div class="step">
+                        <span class="step-number">①</span>
+                        <span class="step-text">Looking for it</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">②</span>
+                        <span class="step-text">Cultivate feelings</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">③</span>
+                        <span class="step-text">Shooting</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">④</span>
+                        <span class="step-text">Harvest achievement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="bottom-section">
+    <div class="bottom-left">
+        <div class="bottom-item">
+        <h3>IN THE WILD</h3>
+        <p>MOER</p>
+        </div>
+        <div class="bottom-item">
+        <h3>IN THE SEA</h3>
+        <p>We create art.<br>We create life</p>
+        </div>
+    </div>
+    <div class="bottom-right">
+        <button class="big-world-btn">Big World</button>
+    </div>
+</div> 
+</body>
+</html>
